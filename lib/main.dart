@@ -56,3 +56,11 @@ class App extends StatelessWidget {
     );
   }
 }
+
+// 막간을 이용한 Colum과 Row 구별하기
+
+// Colum          Row
+
+// Colum
+// Colum    // Row Row Row
+// Colum
