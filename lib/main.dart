@@ -6,6 +6,8 @@ void main() {
 
 // StatelessWidget : 세 가지 core 위젯 중 하나
 class App extends StatelessWidget {
+  const App({super.key});
+
   // 'build' 입력 후 자동완성
   @override
   Widget build(BuildContext context) {
@@ -14,15 +16,15 @@ class App extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         // Scaffold : 화면 구성 및 구조에 관한 위젯
-        backgroundColor: Color(0xFF181818),
+        backgroundColor: const Color(0xFF181818),
         body: Padding(
-          padding: EdgeInsets.symmetric(
+          padding: const EdgeInsets.symmetric(
             horizontal: 40,
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 80,
               ),
               Row(
@@ -30,7 +32,7 @@ class App extends StatelessWidget {
                 children: [
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.end,
-                    children: [
+                    children: const [
                       Text(
                         'Hey, Selena',
                         style: TextStyle(
@@ -49,8 +51,8 @@ class App extends StatelessWidget {
                     ],
                   )
                 ],
-                ),
-              SizedBox(
+              ),
+              const SizedBox(
                 height: 120,
               ),
               Text(
@@ -60,10 +62,10 @@ class App extends StatelessWidget {
                   color: Colors.white.withOpacity(0.8),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 5,
               ),
-              Text(
+              const Text(
                 '\$5 194 482',
                 style: TextStyle(
                   fontSize: 48,
@@ -71,7 +73,7 @@ class App extends StatelessWidget {
                   color: Colors.white,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               Row(
@@ -81,7 +83,7 @@ class App extends StatelessWidget {
                       color: Colors.amber,
                       borderRadius: BorderRadius.circular(45),
                     ),
-                    child: Padding(
+                    child: const Padding(
                       padding: EdgeInsets.symmetric(
                         vertical: 20,
                         horizontal: 50,
@@ -111,3 +113,14 @@ class App extends StatelessWidget {
 // Colum
 // Colum    // Row Row Row
 // Colum
+
+
+// const(파란 줄 원인) 선언 자동화하기
+// 1. vscode 명령팔레트에 > open user settings 입력
+// 2. settings.json 열기
+// 3. 아래 코드를 추가해준다.
+//  "editor.codeActionsOnSave": {
+//     "source.fixAll": true
+//   },
+// 4. tip) 코드 가이드라인 표시하기
+//   "dart.previewFlutterUiGuides": true, 추가
