@@ -11,10 +11,10 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    // Meterial : ios
-    // Cupertino : google
+    // Meterial : ios디자인
+    // Cupertino : google디자인
     return MaterialApp(
-      home: Scaffold(
+      home: Scaffold( // Scaffold : 화면 구성 및 구조에 관한 위젯
         // appBar : 상단 헤더바
         appBar: AppBar(
           title: Text('Hello flutter!'),
