@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(App());
+  runApp(const App());
 }
 
 // StatelessWidget : 세 가지 core 위젯 중 하나
@@ -19,7 +19,7 @@ class App extends StatelessWidget {
         backgroundColor: const Color(0xFF181818),
         body: Padding(
           padding: const EdgeInsets.symmetric(
-            horizontal: 40,
+            horizontal: 20,
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -77,6 +77,7 @@ class App extends StatelessWidget {
                 height: 30,
               ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
                     decoration: BoxDecoration(
@@ -95,6 +96,25 @@ class App extends StatelessWidget {
                         ),
                       ),
                     ),
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                      color: const Color(0xFF1F2123),
+                      borderRadius: BorderRadius.circular(45),
+                    ),
+                    child: const Padding(
+                      padding: EdgeInsets.symmetric(
+                        vertical: 20,
+                        horizontal: 50,
+                      ),
+                      child: Text(
+                        'Request',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                        ),
+                      ),
+                    ),
                   )
                 ],
               )
@@ -106,21 +126,25 @@ class App extends StatelessWidget {
   }
 }
 
-// 막간을 이용한 Colum과 Row 구별하기
+/*
 
-// Colum          Row
+막간을 이용한 Colum과 Row 구별하기
 
-// Colum
-// Colum    // Row Row Row
-// Colum
+Colum          Row
+
+Colum
+Colum    // Row Row Row
+Colum
 
 
-// const(파란 줄 원인) 선언 자동화하기
-// 1. vscode 명령팔레트에 > open user settings 입력
-// 2. settings.json 열기
-// 3. 아래 코드를 추가해준다.
-//  "editor.codeActionsOnSave": {
-//     "source.fixAll": true
-//   },
-// 4. tip) 코드 가이드라인 표시하기
-//   "dart.previewFlutterUiGuides": true, 추가
+const(파란 줄 원인) 선언 자동화하기
+1. vscode 명령팔레트에 > open user settings 입력
+2. settings.json 열기
+3. 아래 코드를 추가해준다.
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+4. tip) 코드 가이드라인 표시하기
+  "dart.previewFlutterUiGuides": true, 추가
+
+*/
