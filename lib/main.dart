@@ -168,10 +168,10 @@ class App extends StatelessWidget {
                           ),
                         ],
                       ),
-                      Transform.scale(
-                        scale: 2.2,
+                      Transform.scale( // 부모요소에 영향을 주지 않고 사이즈 변경
+                        scale: 2.2, // 2.2 만큼 크게
                         child: Transform.translate(
-                          offset: const Offset(-5, 12),
+                          offset: const Offset(-5, 12), // offset: 아이콘 위치(x축, y축)
                           child: const Icon(
                             Icons.euro_rounded,
                             color: Colors.white,
